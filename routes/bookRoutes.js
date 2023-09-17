@@ -26,6 +26,7 @@ router.get('/', bookController.getAllBooks);
  * /books/search:
  *   get:
  *     summary: Get book by code
+ *     tags: [Books]
  *     description: Get book information by its code.
  *     parameters:
  *       - in: query

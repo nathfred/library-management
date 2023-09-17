@@ -25,9 +25,10 @@ router.get('/', memberController.getAllMembers);
 
 /**
  * @swagger
- * /memebrs/search:
+ * /members/search:
  *   get:
  *     summary: Get member by code
+ *     tags: [Members]
  *     description: Get member information by its code.
  *     parameters:
  *       - in: query
@@ -50,6 +51,7 @@ router.get('/search', memberController.getMemberByCode);
  * /members/borrow:
  *   post:
  *     summary: Borrow a book
+ *     tags: [Members]
  *     description: Allow a member to borrow a book.
  *     requestBody:
  *       content:
@@ -76,6 +78,7 @@ router.post('/borrow', memberController.borrowBook);
  * /members/return:
  *   post:
  *     summary: Return a book
+ *     tags: [Members]
  *     description: Allow a member to return a book.
  *     requestBody:
  *       content:
@@ -102,6 +105,7 @@ router.post('/return', memberController.returnBook);
  * /members/check:
  *   get:
  *     summary: Get all available books and quantities
+ *     tags: [Members]
  *     responses:
  *       200:
  *         description: List of available books and their quantities
@@ -115,6 +119,7 @@ router.get('/check', memberController.getAllAvailableBooks);
  * /members/borrowedBooks:
  *   get:
  *     summary: Get the number of books borrowed by each member
+ *     tags: [Members] 
  *     responses:
  *       200:
  *         description: Number of books borrowed by the member
