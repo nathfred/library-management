@@ -1,0 +1,88 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Library Management API",
+      "description": "API documentation for the Library Management system",
+      "version": "1.0"
+    },
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Members",
+        "description": "APIs related to library members"
+      },
+      {
+        "name": "Books",
+        "description": "APIs related to library books"
+      }
+    ],
+    "paths": {
+      "/members": {
+        "get": {
+          "tags": ["Members"],
+          "summary": "Get all members",
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/members/{id}": {
+        "get": {
+          "tags": ["Members"],
+          "summary": "Get a member by ID",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "404": {
+              "description": "Member not found"
+            }
+          }
+        }
+      },
+      "/books": {
+        "get": {
+          "tags": ["Books"],
+          "summary": "Get all books",
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
+        }
+      },
+      "/books/{code}": {
+        "get": {
+          "tags": ["Books"],
+          "summary": "Get a book by code",
+          "parameters": [
+            {
+              "name": "code",
+              "in": "path",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success"
+            },
+            "404": {
+              "description": "Book not found"
+            }
+          }
+        }
+      }
+    }
+  }
+  
